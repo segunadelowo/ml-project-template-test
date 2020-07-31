@@ -1,0 +1,80 @@
+# Package Overview
+package_name: classification_model
+
+# Data Files
+training_data_file: train.csv
+test_data_file: test.csv
+
+pipeline_name: classification_model
+pipeline_save_file: classification_model_output_v
+
+# Variables
+# The variable we are attempting to predict (xxxxx)
+target: target_variable
+
+features:
+  - LotArea
+  - OverallQual
+  - YearRemodAdd
+  - BsmtQual
+  - BsmtFinSF1
+  - TotalBsmtSF
+  - FirstFlrSF
+  - SecondFlrSF
+  - GrLivArea
+  - GarageCars
+
+numerical_vars:
+  - LotArea
+  - OverallQual
+  - YearRemodAdd
+  - BsmtQual
+  - BsmtFinSF1
+  - TotalBsmtSF
+  - FirstFlrSF
+  - SecondFlrSF
+  - GrLivArea
+  - GarageCars
+
+categorical_vars:
+  - BsmtQual
+
+# Validation
+# numerical variables with NA in train set
+numerical_vars_with_na:
+  - LotFrontage
+
+numerical_na_not_allowed:
+  - LotArea
+  - OverallQual
+  - YearRemodAdd
+  - BsmtFinSF1
+  - TotalBsmtSF
+  - FirstFlrSF
+  - SecondFlrSF
+  - GrLivArea
+  - GarageCars
+  - YrSold
+
+# set train/test split
+test_size: 0.1
+
+# to set the random seed
+random_state: 0
+
+# The number of boosting stages to perform
+n_estimators: 50
+
+# the minimum frequency a label should have to be considered frequent
+# and not be removed.
+rare_label_tol: 0.01
+
+# the minimum number of categories a variable should have in order for
+# the encoder to find frequent labels
+rare_label_n_categories: 5
+
+# loss function to be optimized
+loss: ls
+allowed_loss_functions:
+  - ls
+  - huber

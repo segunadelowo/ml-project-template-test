@@ -1,6 +1,7 @@
 import pandas as pd
 import pytest
-import src.feature_eng.categoricals 
+import src.features.categoricals
+
 
 @pytest.fixture
 def dummy_df():
