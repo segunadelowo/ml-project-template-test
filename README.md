@@ -15,7 +15,6 @@ make check
 
 ## Running our checks
 
-In it, we cover the following aspects of setting up a python project, including:
 
 ### Unit Tests
 
