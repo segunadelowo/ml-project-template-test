@@ -1,5 +1,5 @@
 codecov
-mypy
+#mypy
 pylint
 pytest
 pytest-cov
