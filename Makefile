@@ -1,5 +1,5 @@
 setup:
-	python -m venv environments/venv && . environments/venv/bin/activate
+	python3 -m venv environments/venv && . environments/venv/bin/activate
 	pip install --upgrade pip
 	pip install -r requirements.dev
 	pip install -r requirements.prod
